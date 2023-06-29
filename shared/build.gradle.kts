@@ -54,7 +54,7 @@ android {
 }
 
 sqldelight {
-    database("tmdbapi") {
+    database("AppDatabase") {
         packageName = "com.techlads"
         sourceFolders = listOf("sqldelight")
     }
