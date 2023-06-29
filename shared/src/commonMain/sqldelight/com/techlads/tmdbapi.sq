@@ -1,0 +1,20 @@
+CREATE TABLE Favorite (
+    mediaId INTEGER NOT NULL,
+    mediaType TEXT NOT NULL,
+    image TEXT,
+    favorite INTEGER AS Boolean DEFAULT NULL,
+    rating INTEGER AS NOT NULL,
+    title TEXT NOT NULL,
+    releaseDate TEXT NOT NULL,
+);
+
+insertFavorite:
+INSERT INTO Launch(mediaId, mediaType, image, favorite, rating, title, releaseDate)
+VALUES(?, ?, ?, ?, ?, ?, ?);
+
+removeAllFavorite:
+DELETE FROM Favorite;
+
+selectAllFavoritesInfo:
+SELECT Favorite.*
+FROM Favorite;
