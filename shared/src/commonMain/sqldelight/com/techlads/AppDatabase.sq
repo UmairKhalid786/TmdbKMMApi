@@ -1,4 +1,4 @@
-CREATE TABLE Favorite (
+CREATE TABLE FavoriteEntity (
     mediaId INTEGER NOT NULL,
     mediaType TEXT NOT NULL,
     image TEXT,
@@ -9,12 +9,12 @@ CREATE TABLE Favorite (
 );
 
 insertFavorite:
-INSERT INTO Favorite(mediaId, mediaType, image, favorite, rating, title, releaseDate)
+INSERT INTO FavoriteEntity(mediaId, mediaType, image, favorite, rating, title, releaseDate)
 VALUES(?, ?, ?, ?, ?, ?, ?);
 
 removeAllFavorite:
-DELETE FROM Favorite;
+DELETE FROM FavoriteEntity;
 
 selectAllFavoritesInfo:
-SELECT Favorite.*
-FROM Favorite;
+SELECT FavoriteEntity.*
+FROM FavoriteEntity;
