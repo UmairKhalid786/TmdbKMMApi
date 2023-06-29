@@ -26,14 +26,21 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                implementation(libs.kotlinx.serialization)
                 implementation(libs.sqldelight.runtime)
-                implementation(libs.kotlin.serialization)
+                implementation(libs.ktor.core)
+                implementation(libs.ktor.logging)
+                implementation(libs.ktor.serialization)
+                implementation(libs.ktor.serialization.kotlinx.json)
+                implementation(libs.ktor.content.negotiation)
             }
         }
 
         val androidMain by getting {
             dependencies {
                 implementation(libs.sqldelight.android.driver)
+                implementation(libs.ktor.okhttp)
+                implementation(libs.ktor.android)
             }
         }
 
@@ -41,6 +48,8 @@ kotlin {
             dependsOn(commonMain)
             dependencies {
                 implementation(libs.sqldelight.native.driver)
+                implementation(libs.ktor.drawin)
+                implementation(libs.ktor.ios)
             }
         }
     }
