@@ -62,6 +62,7 @@ ktlint = "0.40.0"
 # @keep
 targetSdk = "33"
 palette = "1.0.0"
+kotlinx-serialization = "1.4.1"
 
 [libraries]
 accompanist-flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "accompanist" }
@@ -158,3 +159,4 @@ room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
 androidx-tv-foundation = { module = "androidx.tv:tv-foundation", version.ref = "tv-foundation" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 qrcode = { module = "com.github.alexzhirkevich:custom-qr-generator", version.ref = "qr_code" }
+kotlin-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx_serialization" }
