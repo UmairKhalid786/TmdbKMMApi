@@ -27,4 +27,24 @@ internal class Database(databaseDriverFactory: DatabaseDriverFactory) {
         title: String,
         releaseDate: String
     ) = Favorite(mediaId, mediaType, image, favorite, rating, title, releaseDate)
+
+    internal fun createFavorites(favorites: List<Favorite>) {
+        dbQuery.transaction {
+            favorites.forEach { fav ->
+                insertFavorite(fav)
+            }
+        }
+    }
+
+    private fun insertFavorite(favorite: Favorite) {
+        dbQuery.insertFavorite(
+            mediaId = favorite.mediaId,
+            mediaType = favorite.mediaType,
+            image = favorite.image,
+            favorite = favorite.favorite,
+            rating = favorite.rating,
+            title = favorite.title,
+            releaseDate = favorite.releaseDate
+        )
+    }
 }
