@@ -1,6 +1,6 @@
-package com.dz.tmdbmobileapi.data.responses
+package com.dz.tmdbmobileapi.local.data.responses
 
-import com.dz.tmdbmobileapi.data.model.Series
+import com.dz.tmdbmobileapi.local.data.model.Series
 import kotlinx.serialization.SerialName
 
 data class TvSeriesResponse(

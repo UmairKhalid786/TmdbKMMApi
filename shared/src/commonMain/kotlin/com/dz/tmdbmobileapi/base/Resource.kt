@@ -1,6 +1,6 @@
 package com.dz.tmdbmobileapi.base
 
-import com.dz.tmdbmobileapi.data.model.Failure
+import com.dz.tmdbmobileapi.local.data.model.Failure
 
 data class Resource<out T>(val status: Status, val  data: T? = null, val message: String? = null, val error: Failure? = null) {
 

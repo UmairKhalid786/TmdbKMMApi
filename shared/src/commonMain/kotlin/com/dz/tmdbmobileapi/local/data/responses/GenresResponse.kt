@@ -1,6 +1,6 @@
-package com.dz.tmdbmobileapi.data.responses
+package com.dz.tmdbmobileapi.local.data.responses
 
-import com.dz.tmdbmobileapi.data.model.Genre
+import com.dz.tmdbmobileapi.local.data.model.Genre
 import kotlinx.serialization.SerialName
 
 data class GenresResponse(

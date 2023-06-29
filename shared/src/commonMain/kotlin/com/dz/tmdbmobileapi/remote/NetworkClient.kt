@@ -1,8 +1,8 @@
-package com.dz.tmdbmobileapi.network
+package com.dz.tmdbmobileapi.remote
 
 import com.dz.tmdbmobileapi.Network
 import com.dz.tmdbmobileapi.base.Resource
-import com.dz.tmdbmobileapi.data.model.Failure
+import com.dz.tmdbmobileapi.local.data.model.Failure
 import com.dz.tmdbmobileapi.getNetwork
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body

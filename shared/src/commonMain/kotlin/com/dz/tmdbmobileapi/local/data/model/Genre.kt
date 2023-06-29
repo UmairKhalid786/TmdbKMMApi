@@ -1,4 +1,4 @@
-package com.dz.tmdbmobileapi.data.model
+package com.dz.tmdbmobileapi.local.data.model
 
 import kotlinx.serialization.SerialName
 
