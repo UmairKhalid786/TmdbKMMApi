@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Tmdb_Mobile_Api"
 include(":shared")
+include(":androidapp")
