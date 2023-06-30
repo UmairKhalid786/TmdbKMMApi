@@ -1,4 +1,4 @@
-package com.dz.tmdbmobileapi.local.data.responses
+package com.dz.tmdbmobileapi.remote.responses
 
 import com.dz.tmdbmobileapi.local.data.model.Genre
 import kotlinx.serialization.SerialName

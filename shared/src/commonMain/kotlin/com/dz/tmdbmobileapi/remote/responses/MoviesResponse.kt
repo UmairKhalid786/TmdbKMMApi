@@ -1,13 +1,15 @@
-package com.dz.tmdbmobileapi.local.data.responses
+package com.dz.tmdbmobileapi.remote.responses
 
-import com.dz.tmdbmobileapi.local.data.model.Search
+import com.dz.tmdbmobileapi.local.data.model.Movie
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-data class MultiSearchResponse(
+@Serializable
+data class MoviesResponse(
     @SerialName("page")
     val page: Int,
     @SerialName("results")
-    val searches: List<Search>,
+    val searches: List<Movie>,
     @SerialName("total_pages")
     val totalPages: Int,
     @SerialName("total_results")

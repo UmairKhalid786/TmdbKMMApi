@@ -2,11 +2,8 @@ package com.dz.tmdbmobileapi.remote
 
 import com.dz.tmdbmobileapi.base.Constants.BASE_URL
 import com.dz.tmdbmobileapi.base.Resource
-import com.dz.tmdbmobileapi.local.data.responses.MoviesResponse
+import com.dz.tmdbmobileapi.remote.responses.MoviesResponse
 import com.dz.tmdbmobileapi.remote.NetworkClient.safeGet
-import io.ktor.http.URLBuilder
-import io.ktor.http.URLProtocol
-import io.ktor.http.path
 
 
 class GetPopularMoviesDataSource(private val network: NetworkClient) {
@@ -17,15 +14,12 @@ class GetPopularMoviesDataSource(private val network: NetworkClient) {
         language: String = "en"
     ): Resource<MoviesResponse> {
 
-        val url = URLBuilder().apply {
-            protocol = URLProtocol.HTTPS
-            host = "api.themoviedb.org"
-            path("3", "movie", "popular")
-            parameters.append("page", page.toString())
-            parameters.append("api_key", apiKey)
-            parameters.append("language", language)
-        }.build()
+        val url = BASE_URL + "movie/popular"
 
-        return network.httpClient.safeGet(url.toString())
+        return network.httpClient.safeGet(url, Params().apply {
+            put("page", page.toString())
+            put("api_key", apiKey)
+            put("language", language)
+        })
     }
 }
