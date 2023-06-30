@@ -5,7 +5,7 @@ import com.dz.tmdbmobileapi.base.Resource
 import com.dz.tmdbmobileapi.remote.NetworkClient
 import com.dz.tmdbmobileapi.remote.NetworkClient.safeGet
 import com.dz.tmdbmobileapi.remote.Params
-import com.dz.tmdbmobileapi.remote.responses.MoviesResponse
+import com.dz.tmdbmobileapi.remote.responses.TvSeriesResponse
 
 
 class TopRatedTvSeriesDataSource(private val network: NetworkClient) {
@@ -13,7 +13,7 @@ class TopRatedTvSeriesDataSource(private val network: NetworkClient) {
         page: Int = 1,
         apiKey: String = "d31c90f6e90f1993a5cbce70c8c53ce8",
         language: String = "en"
-    ): Resource<MoviesResponse> {
+    ): Resource<TvSeriesResponse> {
 
         val url = BASE_URL + "tv/top_rated"
 
