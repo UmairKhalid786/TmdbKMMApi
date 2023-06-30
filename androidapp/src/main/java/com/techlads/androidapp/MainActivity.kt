@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.coroutineScope
-import com.dz.tmdbmobileapi.remote.PopularMoviesDataSource
+import com.dz.tmdbmobileapi.remote.datasource.PopularMoviesDataSource
 import com.dz.tmdbmobileapi.remote.NetworkClient
 import com.dz.tmdbmobileapi.usecase.GetPopularMoviesUseCase
 import com.techlads.androidapp.ui.theme.Tmdb_Mobile_ApiTheme

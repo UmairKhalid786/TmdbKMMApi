@@ -1,9 +1,11 @@
-package com.dz.tmdbmobileapi.remote
+package com.dz.tmdbmobileapi.remote.datasource
 
 import com.dz.tmdbmobileapi.base.Constants.BASE_URL
 import com.dz.tmdbmobileapi.base.Resource
+import com.dz.tmdbmobileapi.remote.NetworkClient
 import com.dz.tmdbmobileapi.remote.responses.MoviesResponse
 import com.dz.tmdbmobileapi.remote.NetworkClient.safeGet
+import com.dz.tmdbmobileapi.remote.Params
 
 class PopularMoviesDataSource(private val network: NetworkClient) {
 
@@ -15,7 +17,7 @@ class PopularMoviesDataSource(private val network: NetworkClient) {
 
         val url = BASE_URL + "movie/popular"
 
-        return network.httpClient.safeGet(url, Params().apply {
+        return NetworkClient.httpClient.safeGet(url, Params().apply {
             put("page", page.toString())
             put("api_key", apiKey)
             put("language", language)
