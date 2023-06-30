@@ -11,9 +11,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.coroutineScope
-import com.dz.tmdbmobileapi.remote.datasource.PopularMoviesDataSource
 import com.dz.tmdbmobileapi.remote.NetworkClient
-import com.dz.tmdbmobileapi.usecase.GetPopularMoviesUseCase
+import com.dz.tmdbmobileapi.remote.datasource.TrendingTodayMoviesDataSource
+import com.dz.tmdbmobileapi.usecase.TrendingTodayMoviesUseCae
 import com.techlads.androidapp.ui.theme.Tmdb_Mobile_ApiTheme
 import kotlinx.coroutines.launch
 
@@ -24,8 +24,8 @@ class MainActivity : ComponentActivity() {
         lifecycle.coroutineScope.launch {
 
             val networkClient = NetworkClient
-            val dataSource = PopularMoviesDataSource(networkClient)
-            val useCase = GetPopularMoviesUseCase(dataSource)
+            val dataSource = TrendingTodayMoviesDataSource(networkClient)
+            val useCase = TrendingTodayMoviesUseCae(dataSource)
             val result = useCase.invoke()
             println(result)
         }
