@@ -2,7 +2,9 @@ package com.dz.tmdbmobileapi.local.data.responses
 
 import com.dz.tmdbmobileapi.local.data.model.Movie
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class MoviesResponse(
     @SerialName("page")
     val page: Int,

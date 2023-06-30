@@ -1,7 +1,9 @@
 package com.dz.tmdbmobileapi.local.data.model
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Movie(
     @SerialName("adult")
     val adult: Boolean,
