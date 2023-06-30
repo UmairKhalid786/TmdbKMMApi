@@ -5,7 +5,6 @@ import com.dz.tmdbmobileapi.base.Resource
 import com.dz.tmdbmobileapi.remote.responses.MoviesResponse
 import com.dz.tmdbmobileapi.remote.NetworkClient.safeGet
 
-
 class PopularMoviesDataSource(private val network: NetworkClient) {
 
     suspend fun getPopularMovies(
