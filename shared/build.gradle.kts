@@ -57,7 +57,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.dz.tmdbmobileapi"
+    namespace = "com.techlads.tmdbmobileapi"
     compileSdk = 33
     defaultConfig {
         minSdk = 24
