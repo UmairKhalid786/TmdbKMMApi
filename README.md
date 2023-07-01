@@ -2,7 +2,7 @@
 A project built to provide basic TMDB Api using KMM
 
 
-- ### Simply include shared project build in your project and you will be able to access the following use cases for both movies and series on TMDB
+### Simply include shared project build in your project and you will be able to access the following use cases for both movies and series on TMDB
 
 - Credit
 - Content Detail
@@ -15,13 +15,13 @@ A project built to provide basic TMDB Api using KMM
 - Trending Content
 - Upcoming
 
-- ### For example please see Android Project created in this library
+### For example please see Android Project created in this library
 
-- ### Supported client
+### Supported client
 - Android
 - iOS
 
-- ### Demo App
+### Demo App
 - Android (WIP)
 - iOS (WIP)
 
