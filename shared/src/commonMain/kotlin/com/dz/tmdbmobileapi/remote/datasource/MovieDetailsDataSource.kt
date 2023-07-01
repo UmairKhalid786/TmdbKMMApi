@@ -5,19 +5,19 @@ import com.dz.tmdbmobileapi.base.Resource
 import com.dz.tmdbmobileapi.remote.NetworkClient
 import com.dz.tmdbmobileapi.remote.NetworkClient.safeGet
 import com.dz.tmdbmobileapi.remote.Params
-import com.dz.tmdbmobileapi.remote.responses.TvSeriesResponse
+import com.dz.tmdbmobileapi.remote.responses.MovieDetails
 
-class TopRatedTvSeriesDataSource(private val network: NetworkClient) {
+
+class MovieDetailsDataSource(private val network: NetworkClient) {
     suspend fun get(
-        page: Int = 1,
+        movieId: Int,
         apiKey: String = "d31c90f6e90f1993a5cbce70c8c53ce8",
         language: String = "en"
-    ): Resource<TvSeriesResponse> {
+    ): Resource<MovieDetails> {
 
-        val url = BASE_URL + "tv/top_rated"
+        val url = BASE_URL + "movie/$movieId"
 
         return network.httpClient.safeGet(url, Params().apply {
-            put("page", page.toString())
             put("api_key", apiKey)
             put("language", language)
         })
