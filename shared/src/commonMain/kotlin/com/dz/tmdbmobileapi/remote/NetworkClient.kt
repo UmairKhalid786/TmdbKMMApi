@@ -17,7 +17,7 @@ import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.plugins.observer.ResponseObserver
 import io.ktor.client.request.get
 import io.ktor.client.request.header
-import io.ktor.client.request.headers
+import io.ktor.client.request.parameter
 import io.ktor.client.statement.HttpResponse
 import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
@@ -25,6 +25,7 @@ import kotlinx.serialization.json.Json
 
 import io.ktor.serialization.kotlinx.json.*
 
+typealias Params = HashMap<String, Any>
 
 object NetworkClient {
     private val network: Network = getNetwork()
@@ -58,12 +59,11 @@ object NetworkClient {
         }
     }
 
-    suspend inline fun <reified T> HttpClient.safeGet(url: String, authHeader: String? = null): Resource<T> {
+    suspend inline fun <reified T> HttpClient.safeGet(url: String, params: Params): Resource<T> {
         return try {
             get(url){
-                authHeader ?: return@get
-                headers {
-                    this.append(HttpHeaders.Authorization, authHeader)
+                params.forEach { (key, value) ->
+                    parameter(key, value)
                 }
             }.toResponse<T>()
         } catch (e: Exception) {
