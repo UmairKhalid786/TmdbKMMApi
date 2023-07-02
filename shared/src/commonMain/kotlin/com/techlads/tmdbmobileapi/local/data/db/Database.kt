@@ -1,7 +1,7 @@
 package com.techlads.tmdbmobileapi.local.data.db
 
 import com.techlads.tmdbmobileapi.DatabaseDriverFactory
-import com.techlads.tmdbmobileapi.local.data.model.Favorite
+import com.techlads.tmdbmobileapi.remote.dto.Favorite
 import com.techlads.AppDatabase
 
 internal class Database(databaseDriverFactory: DatabaseDriverFactory) {

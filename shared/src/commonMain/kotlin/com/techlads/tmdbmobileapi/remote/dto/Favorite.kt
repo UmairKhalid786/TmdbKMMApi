@@ -1,4 +1,4 @@
-package com.techlads.tmdbmobileapi.local.data.model
+package com.techlads.tmdbmobileapi.remote.dto
 
 data class Favorite(
     val mediaId: Long,

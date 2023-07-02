@@ -1,6 +1,6 @@
 package com.techlads.tmdbmobileapi.remote.responses
 
-import com.techlads.tmdbmobileapi.local.data.model.Series
+import com.techlads.tmdbmobileapi.remote.dto.Series
 import kotlinx.serialization.SerialName
 
 data class TvSeriesResponse(

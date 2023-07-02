@@ -1,6 +1,6 @@
 package com.techlads.tmdbmobileapi.remote.responses
 
-import com.techlads.tmdbmobileapi.local.data.model.Search
+import com.techlads.tmdbmobileapi.remote.dto.Search
 import kotlinx.serialization.SerialName
 
 data class MultiSearchResponse(
