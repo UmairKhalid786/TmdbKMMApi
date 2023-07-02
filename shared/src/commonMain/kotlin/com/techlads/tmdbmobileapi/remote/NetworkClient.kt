@@ -2,7 +2,7 @@ package com.techlads.tmdbmobileapi.remote
 
 import com.techlads.tmdbmobileapi.Network
 import com.techlads.tmdbmobileapi.base.Resource
-import com.techlads.tmdbmobileapi.local.data.model.Failure
+import com.techlads.tmdbmobileapi.remote.dto.Failure
 import com.techlads.tmdbmobileapi.getNetwork
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body

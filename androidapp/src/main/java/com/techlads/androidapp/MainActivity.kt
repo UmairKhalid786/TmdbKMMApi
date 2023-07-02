@@ -11,10 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.coroutineScope
+import com.techlads.androidapp.ui.theme.Tmdb_Mobile_ApiTheme
+import com.techlads.tmdbmobileapi.base.Resource
 import com.techlads.tmdbmobileapi.remote.NetworkClient
 import com.techlads.tmdbmobileapi.remote.datasource.TrendingTodayMoviesDataSource
 import com.techlads.tmdbmobileapi.usecase.TrendingTodayMoviesUseCae
-import com.techlads.androidapp.ui.theme.Tmdb_Mobile_ApiTheme
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
@@ -27,6 +28,25 @@ class MainActivity : ComponentActivity() {
             val dataSource = TrendingTodayMoviesDataSource(networkClient)
             val useCase = TrendingTodayMoviesUseCae(dataSource)
             val result = useCase.invoke()
+
+            when (result.status) {
+                Resource.Status.SUCCESS -> {
+                    println("Success ${result.data}")
+                }
+
+                Resource.Status.ERROR -> {
+                    println("Error")
+                }
+
+                Resource.Status.LOADING -> {
+                    println("Loading")
+                }
+
+                else -> {
+                    println("Default")
+                }
+            }
+
             println(result)
         }
         setContent {
@@ -36,7 +56,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    ScoreCounter()
                 }
             }
         }
@@ -44,17 +64,15 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun ScoreCounter() {
+    Text(text = "Counter")
 }
+
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     Tmdb_Mobile_ApiTheme {
-        Greeting("Android")
+        ScoreCounter()
     }
 }

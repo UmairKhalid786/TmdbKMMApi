@@ -1,6 +1,6 @@
 package com.techlads.tmdbmobileapi.base
 
-import com.techlads.tmdbmobileapi.local.data.model.Failure
+import com.techlads.tmdbmobileapi.remote.dto.Failure
 
 data class Resource<out T>(val status: Status, val  data: T? = null, val message: String? = null, val error: Failure? = null) {
 

@@ -1,6 +1,6 @@
 package com.techlads.tmdbmobileapi.remote.responses
 
-import com.techlads.tmdbmobileapi.local.data.model.Movie
+import com.techlads.tmdbmobileapi.remote.dto.Movie
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

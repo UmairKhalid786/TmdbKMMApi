@@ -1,6 +1,6 @@
 package com.techlads.tmdbmobileapi.remote.responses
 
-import com.techlads.tmdbmobileapi.local.data.model.Genre
+import com.techlads.tmdbmobileapi.remote.dto.Genre
 import kotlinx.serialization.SerialName
 
 data class GenresResponse(
