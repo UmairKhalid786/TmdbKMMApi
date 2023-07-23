@@ -34,6 +34,10 @@ kotlin {
                 implementation(libs.ktor.serialization)
                 implementation(libs.ktor.serialization.kotlinx.json)
                 implementation(libs.ktor.content.negotiation)
+
+                implementation(libs.koin.core)
+                implementation(libs.koin.test)
+
             }
         }
 
@@ -60,7 +64,7 @@ android {
     namespace = "com.techlads.tmdbmobileapi"
     compileSdk = 33
     defaultConfig {
-        minSdk = 24
+        minSdk = 21
     }
 }
 
