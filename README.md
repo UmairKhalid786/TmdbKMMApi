@@ -24,13 +24,3 @@ A project built to provide basic TMDB Api using KMM
 ### Demo App
 - Android (WIP)
 - iOS (WIP)
-
-
-
-
-
-
-
-
-
-
