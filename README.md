@@ -15,7 +15,7 @@ A project built to provide basic TMDB Api using KMM
 - Trending Content
 - Upcoming
  
-### For example please see Android Project created in this library
+### For example please see the Android Project created in this library
 
 ### Supported client
 - Android
